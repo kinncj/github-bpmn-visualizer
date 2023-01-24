@@ -1,10 +1,4 @@
 function execute() {
-    var removeContainer = document.getElementById('bpmn-modal');
-
-    if (removeContainer) {
-        document.body.removeChild(removeContainer);
-    }
-
     var fileName = document.querySelector('#blob-path > strong')
         ?.innerText;
     if (!fileName || fileName?.indexOf(".bpmn") == -1) {
@@ -36,6 +30,12 @@ function execute() {
     anchor.innerText = "Render BPMN";
 
     anchor.addEventListener('click', function () {
+        var removeContainer = document.getElementById('bpmn-modal');
+
+        if (removeContainer) {
+            document.body.removeChild(removeContainer);
+        }
+
         var bpmnContainer = document.createElement('div');
         bpmnContainer.setAttribute('id', 'bpmn-container');
         bpmnContainer.setAttribute('style', 'height: 1000px;');

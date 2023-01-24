@@ -1,6 +1,6 @@
 {
   "name": "GitHub - BPMN Render",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Renders .bpmn files in GitHub",
   "manifest_version": 3,
   "author": "Kinn Coelho Juliao",
