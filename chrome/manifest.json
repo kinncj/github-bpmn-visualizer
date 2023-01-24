@@ -1,0 +1,32 @@
+{
+  "name": "GitHub - BPMN Render",
+  "version": "1.0.0",
+  "description": "Renders .bpmn files in GitHub",
+  "manifest_version": 3,
+  "author": "Kinn Coelho Juliao",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "16x16.png",
+    "38": "38x38.png",
+    "48": "48x48.png",
+    "128": "128x128.png"
+  },
+  "content_scripts": [{
+    "matches": ["*://*.github.com/*"],
+    "js": [
+      "bpmn.js",
+      "script.js"
+    ],
+    "css": [
+      "bpmn.css"
+    ]
+  }],
+  "persistent": false,
+  "permissions": [
+    "scripting",
+    "history",
+    "activeTab"
+  ]
+}
